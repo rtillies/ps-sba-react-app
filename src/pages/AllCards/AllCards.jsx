@@ -1,16 +1,26 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import axios from "axios";
 import "./allCards.css";
 import { DeckContext } from "../../Context";
+import cardsStore from "../../stores/cardsStore";
+import Deck from "../../components/Deck/Deck";
+
 
 export default () => {
-  const deck_id = useContext(DeckContext)
+  const store = cardsStore();
+  
+  useEffect(() => {
+    store.getCards();
+  }, []);
 
   return (
     <>
       <div className="allcards page">
         <div className="container">
-          <p>Card Deck: {deck_id}</p>
+          <h1>All Cards</h1>
+          <p>Card Deck: {store.deckID}</p>
+          {/* {store.getCards()} */}
+          <Deck />
         </div>
       </div>
     </>
