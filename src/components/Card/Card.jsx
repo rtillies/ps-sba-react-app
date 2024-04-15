@@ -1,12 +1,15 @@
 import cardsStore from "../../stores/cardsStore"
+import './card.css'
 
 export default function Card({card}) {
   const store = cardsStore();
 
   return (
-    <div key={card.code}>
+    <div className="card-group" key={card.code}>
       {/* Card {card.code} */}
-      <img src={card.image} alt={card.code} height={100} />
+      <img className="Card" src={card.image} alt={card.code} />
+      <br />
+      <p className="words">{card.value} {card.suit}</p>
     </div>
   )
 }

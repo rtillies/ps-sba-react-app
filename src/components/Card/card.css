@@ -1,12 +1,19 @@
 .Card {
-  /* display: flex; */
-  height: 100px;
-  margin: 5px;
-  transition: transform .2s; /* Animation */
-  
+  height: 150px;
+  margin: 25px 5px 5px 5px;
+  transition: transform .5s; /* Animation */
+  border-radius: 5.5%;
 }
 
 .Card:hover {
   transform: scale(1.1);
   border: 2px solid rebeccapurple;
+  /* transition-timing-function: ease-out; */
+}
+
+.words {
+  font-size: 0.8em;
+  color: rebeccapurple;
+  font-weight: bold;
+  text-align: center;
 }
