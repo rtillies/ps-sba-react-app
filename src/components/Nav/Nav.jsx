@@ -7,13 +7,13 @@ export default () => {
     <nav>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/all">All Cards</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/suit">By Suit</Link>
         </li>
         <li>
-          <Link to="/display">Display</Link>
+          <Link to="/rank">By Rank</Link>
         </li>
       </ul>
     </nav>
