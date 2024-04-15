@@ -1,0 +1,12 @@
+.Card {
+  /* display: flex; */
+  height: 100px;
+  margin: 5px;
+  transition: transform .2s; /* Animation */
+  
+}
+
+.Card:hover {
+  transform: scale(1.1);
+  border: 2px solid rebeccapurple;
+}

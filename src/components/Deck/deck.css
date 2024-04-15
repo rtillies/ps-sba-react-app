@@ -1,0 +1,7 @@
+.Deck {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* background-color: DodgerBlue; */
+  padding: 20px 10px;
+}
