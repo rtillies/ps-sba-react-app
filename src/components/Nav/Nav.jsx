@@ -7,6 +7,9 @@ export default () => {
     <nav>
       <ul>
         <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
           <Link to="/all">All Cards</Link>
         </li>
         <li>
