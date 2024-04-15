@@ -4,6 +4,8 @@ import axios from "axios";
 const cardsStore = create((set) => ({
   deck: null,
   deckID: '06tjvcttxnld',
+  suits: ['spades', 'diamonds', 'clubs', 'hearts', 'joker'],
+  ranks: ['joker', 'ace', 'king', 'queen', 'jack', '10', '9', '8', '7', '6', '5', '4', '3', '2'],
   // deckID: null,
 
   // getDeck: async() => {
