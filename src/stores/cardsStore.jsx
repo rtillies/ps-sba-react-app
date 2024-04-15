@@ -2,8 +2,10 @@ import {create} from 'zustand'
 import axios from "axios";
 
 const cardsStore = create((set) => ({
-  deck: null,
   deckID: '06tjvcttxnld',
+  deck: null,
+  showDeck: null,
+
   suits: ['spades', 'diamonds', 'clubs', 'hearts', 'joker'],
   ranks: ['joker', 'ace', 'king', 'queen', 'jack', '10', '9', '8', '7', '6', '5', '4', '3', '2'],
   // deckID: null,
@@ -35,7 +37,8 @@ const cardsStore = create((set) => ({
     console.log(deckID);
     console.log('data', res.data.cards);
     set({
-      deck: res.data.cards
+      deck: res.data.cards,
+      showDeck: res.data.cards
     })
   },
 
@@ -44,6 +47,18 @@ const cardsStore = create((set) => ({
     await axios.get(`${deckID}/shuffle/`)
     set({
       deck: res.data.cards
+    })
+  },
+
+  filter: (term) => {
+    const {deck, showDeck} = cardsStore.getState()
+
+    const filteredDeck = deck.cards.filter((card) => {
+      card.value === term || card.suit === term
+    })
+
+    set({
+      showDeck: filteredDeck
     })
   }
 
