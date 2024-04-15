@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import axios from "axios";
+import './App.css'
 
 import cardsStore from "./stores/cardsStore";
 import Nav from "./components/Nav/Nav";
