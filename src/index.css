@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.App {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
 .page {
   flex: 9;
+  background-color: lightgoldenrodyellow;
 }
