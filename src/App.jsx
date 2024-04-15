@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 
-// import "./App.css";
+import cardsStore from "./stores/cardsStore";
 import Nav from "./components/Nav/Nav";
 import Landing from "./pages/Landing/Landing";
 import AllCards from "./pages/AllCards/AllCards";
@@ -10,31 +10,14 @@ import Custom404 from "./pages/Custom404/Custom404";
 import { DeckContext } from "./Context";
 
 function App() {
-  const [deck, setDeck] = useState("06tjvcttxnld");
-
-  //#region Use Effect: Fetch Card Deck
-  useEffect(() => {
-    async function getDeck() {
-      if (!deck) setDeck("new");
-      axios
-        .get(
-          `${deck}/shuffle/?jokers_enabled=true`
-        )
-        .then((res) => {
-          console.log(res.data);
-          setDeck(res.data.deck_id);
-        });
-    }
-    getDeck();
-  }, []);
-  //#endregion
+  const store = cardsStore();
 
   return (
     <>
       <div className="App">
         <Nav />
 
-        <DeckContext.Provider value={deck}>
+        <DeckContext.Provider value={store.deckID}>
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/all" element={<AllCards />} />
