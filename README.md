@@ -10,13 +10,7 @@
 1. Built with HTML, CSS, JavaScript, and React.
 1. Hosted on Render.
 1. Frequent commits to GitHub.
-1. A README.md file in your GitHub repository with:
-  * Explanations of the technologies used.
-  * Explanations of the approach taken.
-  * A link to your live site.
-  * Usage instructions, if relevant.
-  * Unsolved problems.
-  * etc.
+1. A README.md file in your GitHub repository
 
 ## Render and GitHub
 * Render: [rtillies/ps-sba-react-app](https://github.com/rtillies/ps-sba-react-app)
