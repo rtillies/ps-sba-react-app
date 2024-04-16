@@ -1,5 +1,5 @@
 import React from "react";
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App/App";
 import "./index.css";
@@ -11,9 +11,9 @@ axios.defaults.baseURL = "https://deckofcardsapi.com/api/deck";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  // <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>
+  // </StrictMode>
 );
