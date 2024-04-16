@@ -4,6 +4,11 @@ import ReactDOM from "react-dom/client";
 import App from "./components/App/App";
 import "./index.css";
 import axios from "axios";
+// Import our custom CSS
+import './scss/styles.scss'
+
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
 
 axios.defaults.baseURL = "https://deckofcardsapi.com/api/deck";
 
