@@ -6,7 +6,7 @@ const cardsStore = create((set) => ({
   deck: null,
   showDeck: null,
 
-  suits: ['all', 'spades', 'diamonds', 'clubs', 'hearts', 'joker'],
+  suits: ['spades', 'diamonds', 'clubs', 'hearts', 'joker'],
   ranks: ['ace', 'king', 'queen', 'jack', '10', '9', '8', '7', '6', '5', '4', '3', '2'],
 
   getCards: async() => {
@@ -34,7 +34,7 @@ const cardsStore = create((set) => ({
     console.log('filter', term);
     console.log('deck filter', deck);
 
-    if(term === 'all') {
+    if(term.toLowerCase() === 'all') {
       set({
         showDeck: deck
       })
