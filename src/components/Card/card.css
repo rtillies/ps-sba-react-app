@@ -27,3 +27,8 @@
   font-weight: bold;
   text-align: center;
 }
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+}
