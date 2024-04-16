@@ -17,8 +17,8 @@ export default () => {
       <div className="allcards page">
         <div className="container">
           <h1>All Cards</h1>
-          <p>Card Deck: {store.deckID}</p>
           <Deck />
+          <span className="small">Card Deck ID: {store.deckID}</span>
         </div>
       </div>
     </>
