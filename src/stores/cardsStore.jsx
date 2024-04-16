@@ -8,22 +8,10 @@ const cardsStore = create((set) => ({
 
   suits: ['spades', 'diamonds', 'clubs', 'hearts', 'joker'],
   ranks: ['joker', 'ace', 'king', 'queen', 'jack', '10', '9', '8', '7', '6', '5', '4', '3', '2'],
-  // deckID: null,
-
-  // getDeck: async() => {
-  //   // const {deckID} = cardsStore.getState() || 'new'
-  //   // const id = deckID || 'new'
-  //   console.log(deckID);
-
-  //   const res = await axios.get(`${deckID}/shuffle/?jokers_enabled=true`)
-  //   set({
-  //     // deckID: res.data.deckID
-  //   })
-  // },
 
   getCards: async() => {
-    const {deckID} = cardsStore.getState() || 'new'
-    const count = 20
+    const {deckID, deck} = cardsStore.getState() || 'new'
+    const count = 30 // cards remaining
 
     if (deckID === null) {
       // set({deckID: 'new'})
@@ -53,14 +41,19 @@ const cardsStore = create((set) => ({
   filter: (term) => {
     const {deck, showDeck} = cardsStore.getState()
 
-    const filteredDeck = deck.cards.filter((card) => {
-      card.value === term || card.suit === term
+    console.log('filter', term);
+    console.log('deck filter', deck);
+
+    const filteredDeck = deck.filter((card) => {
+      return (card.value.toLowerCase() === term || card.suit.toLowerCase() === term)
     })
+
+    console.log('new deck', filteredDeck);
 
     set({
       showDeck: filteredDeck
     })
-  }
+  },
 
 }))
 
