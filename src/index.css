@@ -21,14 +21,11 @@
 .small {
   font-size: 0.7em;
   color: rgb(220, 220, 210);
-  /* font-weight: bold; */
-  /* text-align: right; */
-  /* justify-content: right; */
   border: 1px solid;
   padding: 2px;
 }
 
 button {
-  margin: 0 2px;
+  margin: 2px;
   padding: 0 2px;
 }
