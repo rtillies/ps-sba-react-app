@@ -16,7 +16,7 @@ export default () => {
           <Link to="/suit">By Suit</Link>
         </li>
         <li>
-          <Link to="/rank">By Rank</Link>
+          <Link to="/filter">Filter</Link>
         </li>
       </ul>
     </nav>

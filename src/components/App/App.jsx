@@ -9,6 +9,7 @@ import Landing from "../../pages/Landing/Landing";
 import AllCards from "../../pages/AllCards/AllCards";
 import Suits from "../../pages/Suits/Suits";
 import Ranks from "../../pages/Ranks/Ranks";
+import Filter from "../../pages/Filter/Filter";
 import Custom404 from "../../pages/Custom404/Custom404";
 import { DeckContext } from "../Context";
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/all" element={<AllCards />} />
             <Route path="/suit" element={<Suits />} />
             <Route path="/rank" element={<Ranks />} />
+            <Route path="/filter" element={<Filter />} />
             <Route path="*" element={<Custom404 />} />
           </Routes>
         </DeckContext.Provider>
