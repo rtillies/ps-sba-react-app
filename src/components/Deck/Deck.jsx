@@ -8,10 +8,10 @@ export default function Deck() {
   return (
     <>
       <div className="Deck">
-        {console.log("Cards", store.deck)}
+        {console.log("Cards", store.showDeck)}
         {store.showDeck &&
-          store.showDeck.map((card) => {
-            return <Card card={card} key={card.code} />;
+          store.showDeck.map((card, index) => {
+            return <Card card={card} key={card.code} position={index+1} />;
           })}
       </div>
     </>
