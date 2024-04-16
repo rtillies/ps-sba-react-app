@@ -1,6 +1,6 @@
 .Card {
   height: 150px;
-  margin: 25px 5px 5px 5px;
+  margin: 5px;
   transition: transform .5s; /* Animation */
   border-radius: 5.5%;
 }
@@ -8,10 +8,20 @@
 .Card:hover {
   transform: scale(1.1);
   border: 2px solid rebeccapurple;
-  /* transition-timing-function: ease-out; */
 }
 
-.words {
+.top {
+  font-size: 0.9em;
+  margin-top: 5px;
+  margin-bottom: -2px;
+  color: rebeccapurple;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bottom {
+  margin-top: -2px;
+  margin-bottom: 15px;
   font-size: 0.7em;
   color: rebeccapurple;
   font-weight: bold;
