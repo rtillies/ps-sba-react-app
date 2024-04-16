@@ -7,11 +7,10 @@ export default function Deck() {
 
   return (
     <>
-      {/* <h2>Card Deck</h2> */}
       <div className="Deck">
         {console.log("Cards", store.deck)}
-        {store.deck &&
-          store.deck.map((card) => {
+        {store.showDeck &&
+          store.showDeck.map((card) => {
             return <Card card={card} key={card.code} />;
           })}
       </div>
