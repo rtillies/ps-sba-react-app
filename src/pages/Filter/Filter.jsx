@@ -22,7 +22,8 @@ export default () => {
     <>
       <div className="ranks page">
         <div className="container">
-        <h1>Filter</h1>
+        {/* <h1>Filter</h1> */}
+        <h3>Click a button to filter cards</h3>
           {store.suits && store.suits.map((suit) => {
             return <button key={suit} value={suit} onClick={handleClick}>{suit}</button>
           })}
@@ -30,6 +31,8 @@ export default () => {
           {store.ranks && store.ranks.map((rank) => {
             return <button key={rank} value={rank} onClick={handleClick}>{rank}</button>
           })}
+          <br />
+          <button id='shuffle' key='shuffle' value='shuffle' onClick={store.getCards}>SHUFFLE CARDS</button>
           <Deck />
           <span className="small">Card Deck ID: {store.deckID}</span>
         </div>
