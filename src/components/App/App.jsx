@@ -19,18 +19,19 @@ function App() {
   return (
     <>
       <div className="App">
-        <Nav />
+        {/* <Nav /> */}
 
-        <DeckContext.Provider value={store.deckID}>
+        {/* <DeckContext.Provider value={store.deckID}> */}
           <Routes>
-            <Route path="/" element={<Landing />} />
+            <Route index element={<Filter />} />
+            {/* <Route path="/" element={<Landing />} />
             <Route path="/all" element={<AllCards />} />
             <Route path="/suit" element={<Suits />} />
             <Route path="/rank" element={<Ranks />} />
-            <Route path="/filter" element={<Filter />} />
+            <Route path="/filter" element={<Filter />} /> */}
             <Route path="*" element={<Custom404 />} />
           </Routes>
-        </DeckContext.Provider>
+        {/* </DeckContext.Provider> */}
       </div>
     </>
   );
