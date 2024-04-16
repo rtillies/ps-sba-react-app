@@ -11,13 +11,11 @@ const cardsStore = create((set) => ({
 
   getCards: async() => {
     const {deckID, deck} = cardsStore.getState() || 'new'
-    const count = 30 // cards remaining
+    const count = 54 // cards remaining
 
     if (deckID === null) {
       // set({deckID: 'new'})
     }
-
-    // const {deckID} = cardsStore.getState() || 'new'
 
     await axios.get(`${deckID}/shuffle/`)
     const res = await axios.get(`${deckID}/draw/?count=${count}`)
@@ -27,14 +25,6 @@ const cardsStore = create((set) => ({
     set({
       deck: res.data.cards,
       showDeck: res.data.cards
-    })
-  },
-
-  shuffle: async() => {
-    const {deckID} = cardsStore.getState() || 'new'
-    await axios.get(`${deckID}/shuffle/`)
-    set({
-      deck: res.data.cards
     })
   },
 
