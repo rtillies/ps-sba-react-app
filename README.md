@@ -13,8 +13,8 @@
 1. A README.md file in your GitHub repository
 
 ## Render and GitHub
-* Render: [rtillies/ps-sba-react-app](https://github.com/rtillies/ps-sba-react-app)
-* GitHub: [ps-sba-react-app.onrender.com](https://ps-sba-react-app.onrender.com/)
+* Render: [ps-sba-react-app.onrender.com](https://ps-sba-react-app.onrender.com/)
+* GitHub: [rtillies/ps-sba-react-app](https://github.com/rtillies/ps-sba-react-app)
 
 ## Instructions
 
