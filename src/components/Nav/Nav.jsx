@@ -10,6 +10,9 @@ export default () => {
           <Link to="/">Home</Link>
         </li>
         <li>
+          <Link to="/about">About</Link>
+        </li>
+        {/* <li>
           <Link to="/all">All Cards</Link>
         </li>
         <li>
@@ -17,7 +20,7 @@ export default () => {
         </li>
         <li>
           <Link to="/filter">Filter</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

@@ -11,6 +11,13 @@
   flex-direction: column;
 }
 
+.about {
+  flex: 9;
+  background-color: lightgoldenrodyellow;
+  /* text-align: center; */
+  /* padding: 20px; */
+}
+
 .page {
   flex: 9;
   background-color: lightgoldenrodyellow;
