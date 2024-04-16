@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./landing.css";
+import "./about.css";
 import { BrowserRouter, Link } from "react-router-dom";
 
 import { DeckContext } from "../../components/Context";
